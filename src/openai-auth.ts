@@ -589,6 +589,9 @@ async function waitForRecaptcha(
     return
   }
 
+  // solve net delay problem
+  await delay(7000)
+    
   const { pollingIntervalMs = 100, timeoutMs } = opts
   const captcha = await page.$('textarea#g-recaptcha-response')
   const startTime = Date.now()
