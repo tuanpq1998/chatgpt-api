@@ -169,7 +169,7 @@ export async function browserPostEventStream(
             }
           } catch (err) {
             console.warn('fetchSSE onMessage unexpected error', err)
-            reject(err)
+            // reject(err)
           }
         }
 
